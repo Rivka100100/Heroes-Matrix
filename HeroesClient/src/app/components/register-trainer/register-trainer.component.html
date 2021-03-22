@@ -1,0 +1,23 @@
+<form #formInfo="ngForm">
+  <input
+    #priceInfo="ngModel"
+    required
+    type="string"
+    placeholder="trainerUsername"
+    name="trainerUsername"
+    [(ngModel)]="trainer.trainerUsername"
+  />
+  <br /><br />
+
+  <input
+    #stockInfo="ngModel"
+    required
+    type="string"
+    placeholder="trainerPassword"
+    name="trainerPassword"
+    [(ngModel)]="trainer.trainerPassword"
+  />
+  <br /><br />
+
+  <button [disabled]="formInfo.form.invalid" (click)="addTrainer()">Add</button>
+</form>

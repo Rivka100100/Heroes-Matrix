@@ -1,0 +1,35 @@
+<p>Available Heroes</p>
+<div *ngIf="allHeroes">
+  <br /><br />
+
+  <table>
+    <tr>
+      <th>Choose Hero to train</th>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+    <tr *ngFor="let h of allHeroes">
+      <input type="checkbox" (change)="assainToTrainer(h.HeroID)" />
+      <td>{{ h.HeroID }}</td>
+      <td>{{ h.HeroFirstName }}</td>
+      <td>{{ h.HeroLastName }}</td>
+      <a
+        routerLink="/hero-card/
+      {{ h.HeroID }}/
+      {{ h.HeroFirstName }}/
+      {{ h.HeroLastName }}/
+      {{ h.TrainerID }}/
+      {{ h.HeroAbility }}/
+      {{ h.HeroStartTrainingDate }}/
+      {{ h.ColorDescription }}/
+      {{ h.HeroStartingPower }}/
+      {{ h.HeroCurrentPower }}
+      "
+        >view hero's data</a
+      >
+
+      <!-- <td><a routerLink="/hero-card">view hero's data</a></td> -->
+    </tr>
+  </table>
+</div>

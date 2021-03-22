@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HeroesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Colors">
+          <Key>
+            <PropertyRef Name="ColorID" />
+          </Key>
+          <Property Name="ColorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ColorDescription" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Heroes">
+          <Key>
+            <PropertyRef Name="HeroID" />
+          </Key>
+          <Property Name="HeroID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TrainerID" Type="int" />
+          <Property Name="HeroFirstName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="HeroLastName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="HeroAbility" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="HeroStartTrainingDate" Type="date" Nullable="false" />
+          <Property Name="HeroSuitColorsID" Type="int" Nullable="false" />
+          <Property Name="HeroStartingPower" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="HeroCurrentPower" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Trainers">
+          <Key>
+            <PropertyRef Name="TrainerID" />
+          </Key>
+          <Property Name="TrainerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TrainerUsername" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TrainerPassword" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Heroes_Colors">
+          <End Role="Colors" Type="Self.Colors" Multiplicity="1" />
+          <End Role="Heroes" Type="Self.Heroes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Colors">
+              <PropertyRef Name="ColorID" />
+            </Principal>
+            <Dependent Role="Heroes">
+              <PropertyRef Name="HeroSuitColorsID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Heroes_Trainers">
+          <End Role="Trainers" Type="Self.Trainers" Multiplicity="0..1" />
+          <End Role="Heroes" Type="Self.Heroes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trainers">
+              <PropertyRef Name="TrainerID" />
+            </Principal>
+            <Dependent Role="Heroes">
+              <PropertyRef Name="TrainerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HeroesModelStoreContainer">
+          <EntitySet Name="Colors" EntityType="Self.Colors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Heroes" EntityType="Self.Heroes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trainers" EntityType="Self.Trainers" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Heroes_Colors" Association="Self.FK_Heroes_Colors">
+            <End Role="Colors" EntitySet="Colors" />
+            <End Role="Heroes" EntitySet="Heroes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Heroes_Trainers" Association="Self.FK_Heroes_Trainers">
+            <End Role="Trainers" EntitySet="Trainers" />
+            <End Role="Heroes" EntitySet="Heroes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HeroesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HeroesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Colors" EntityType="HeroesModel.Color" />
+          <EntitySet Name="Heroes" EntityType="HeroesModel.Hero" />
+          <EntitySet Name="sysdiagrams" EntityType="HeroesModel.sysdiagram" />
+          <EntitySet Name="Trainers" EntityType="HeroesModel.Trainer" />
+          <AssociationSet Name="FK_Heroes_Colors" Association="HeroesModel.FK_Heroes_Colors">
+            <End Role="Color" EntitySet="Colors" />
+            <End Role="Hero" EntitySet="Heroes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Heroes_Trainers" Association="HeroesModel.FK_Heroes_Trainers">
+            <End Role="Trainer" EntitySet="Trainers" />
+            <End Role="Hero" EntitySet="Heroes" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Color">
+          <Key>
+            <PropertyRef Name="ColorID" />
+          </Key>
+          <Property Name="ColorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ColorDescription" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Heroes" Relationship="HeroesModel.FK_Heroes_Colors" FromRole="Color" ToRole="Hero" />
+        </EntityType>
+        <EntityType Name="Hero">
+          <Key>
+            <PropertyRef Name="HeroID" />
+          </Key>
+          <Property Name="HeroID" Type="Guid" Nullable="false" />
+          <Property Name="TrainerID" Type="Int32" />
+          <Property Name="HeroFirstName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="HeroLastName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="HeroAbility" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="HeroStartTrainingDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="HeroSuitColorsID" Type="Int32" Nullable="false" />
+          <Property Name="HeroStartingPower" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="HeroCurrentPower" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="Color" Relationship="HeroesModel.FK_Heroes_Colors" FromRole="Hero" ToRole="Color" />
+          <NavigationProperty Name="Trainer" Relationship="HeroesModel.FK_Heroes_Trainers" FromRole="Hero" ToRole="Trainer" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Trainer">
+          <Key>
+            <PropertyRef Name="TrainerID" />
+          </Key>
+          <Property Name="TrainerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TrainerUsername" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TrainerPassword" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Heroes" Relationship="HeroesModel.FK_Heroes_Trainers" FromRole="Trainer" ToRole="Hero" />
+        </EntityType>
+        <Association Name="FK_Heroes_Colors">
+          <End Type="HeroesModel.Color" Role="Color" Multiplicity="1" />
+          <End Type="HeroesModel.Hero" Role="Hero" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Color">
+              <PropertyRef Name="ColorID" />
+            </Principal>
+            <Dependent Role="Hero">
+              <PropertyRef Name="HeroSuitColorsID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Heroes_Trainers">
+          <End Type="HeroesModel.Trainer" Role="Trainer" Multiplicity="0..1" />
+          <End Type="HeroesModel.Hero" Role="Hero" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trainer">
+              <PropertyRef Name="TrainerID" />
+            </Principal>
+            <Dependent Role="Hero">
+              <PropertyRef Name="TrainerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HeroesModelStoreContainer" CdmEntityContainer="HeroesEntities">
+          <EntitySetMapping Name="Colors">
+            <EntityTypeMapping TypeName="HeroesModel.Color">
+              <MappingFragment StoreEntitySet="Colors">
+                <ScalarProperty Name="ColorDescription" ColumnName="ColorDescription" />
+                <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Heroes">
+            <EntityTypeMapping TypeName="HeroesModel.Hero">
+              <MappingFragment StoreEntitySet="Heroes">
+                <ScalarProperty Name="HeroCurrentPower" ColumnName="HeroCurrentPower" />
+                <ScalarProperty Name="HeroStartingPower" ColumnName="HeroStartingPower" />
+                <ScalarProperty Name="HeroSuitColorsID" ColumnName="HeroSuitColorsID" />
+                <ScalarProperty Name="HeroStartTrainingDate" ColumnName="HeroStartTrainingDate" />
+                <ScalarProperty Name="HeroAbility" ColumnName="HeroAbility" />
+                <ScalarProperty Name="HeroLastName" ColumnName="HeroLastName" />
+                <ScalarProperty Name="HeroFirstName" ColumnName="HeroFirstName" />
+                <ScalarProperty Name="TrainerID" ColumnName="TrainerID" />
+                <ScalarProperty Name="HeroID" ColumnName="HeroID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="HeroesModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trainers">
+            <EntityTypeMapping TypeName="HeroesModel.Trainer">
+              <MappingFragment StoreEntitySet="Trainers">
+                <ScalarProperty Name="TrainerPassword" ColumnName="TrainerPassword" />
+                <ScalarProperty Name="TrainerUsername" ColumnName="TrainerUsername" />
+                <ScalarProperty Name="TrainerID" ColumnName="TrainerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

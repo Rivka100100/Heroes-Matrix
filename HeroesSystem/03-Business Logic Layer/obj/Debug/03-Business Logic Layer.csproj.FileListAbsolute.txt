@@ -1,0 +1,17 @@
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\03-Business Logic Layer.dll.config
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\03-Business Logic Layer.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\03-Business Logic Layer.pdb
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\01_Data_Access_Layer.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\02-Data Transfer Object.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\EntityFramework.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\01_Data_Access_Layer.pdb
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\01_Data_Access_Layer.dll.config
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\02-Data Transfer Object.pdb
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\EntityFramework.xml
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\obj\Debug\03-Business Logic Layer.csprojAssemblyReference.cache
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\obj\Debug\03-Business Logic Layer.csproj.CoreCompileInputs.cache
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\obj\Debug\03-Business Logic Layer.csproj.CopyComplete
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\obj\Debug\03-Business Logic Layer.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\03-Business Logic Layer\obj\Debug\03-Business Logic Layer.pdb

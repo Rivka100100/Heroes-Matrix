@@ -1,0 +1,30 @@
+<br /><br />
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  <tr *ngFor="let h of allHeroes">
+    <td>{{ h.HeroID }}</td>
+    <td>{{ h.HeroFirstName }}</td>
+    <td>{{ h.HeroLastName }}</td>
+    <td>
+      <a
+        routerLink="/hero-card/
+      {{ h.HeroID }}/
+      {{ h.HeroFirstName }}/
+      {{ h.HeroLastName }}/
+      {{ h.TrainerID }}/
+      {{ h.HeroAbility }}/
+      {{ h.HeroStartTrainingDate }}/
+      {{ h.ColorDescription }}/
+      {{ h.HeroStartingPower }}/
+      {{ h.HeroCurrentPower }}
+      "
+        >view hero's data</a
+      >
+    </td>
+  </tr>
+</table>

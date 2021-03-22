@@ -1,0 +1,6 @@
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\02-Data Transfer Object\bin\Debug\02-Data Transfer Object.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\02-Data Transfer Object\bin\Debug\02-Data Transfer Object.pdb
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\02-Data Transfer Object\obj\Debug\02-Data Transfer Object.csproj.CoreCompileInputs.cache
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\02-Data Transfer Object\obj\Debug\02-Data Transfer Object.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\02-Data Transfer Object\obj\Debug\02-Data Transfer Object.pdb
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\02-Data Transfer Object\obj\Debug\02-Data Transfer Object.csprojAssemblyReference.cache

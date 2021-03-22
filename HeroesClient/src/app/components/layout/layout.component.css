@@ -1,0 +1,26 @@
+section {
+  height: 100%;
+  border: 2px solid black;
+  box-sizing: border-box; /* So width and height occupy the entire space */
+  text-align: center;
+  background-color: lightgreen;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 virtual columns*/
+  grid-template-rows: 13% 80% 7%; /* 3 rows with those heights */
+}
+
+header,
+footer {
+  border: 2px solid black;
+  grid-column: span 12; /* Span over 12 columns */
+}
+
+aside {
+  border: 2px solid black;
+  grid-column: span 2; /* Span over 2 columns */
+}
+
+main {
+  border: 2px solid black;
+  grid-column: span 10; /* Span over 10 columns */
+}

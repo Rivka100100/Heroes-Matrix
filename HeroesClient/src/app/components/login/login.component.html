@@ -1,0 +1,17 @@
+<form>
+  <input
+    type="text"
+    name="username"
+    [(ngModel)]="credentials.trainerUsername"
+  />
+  <br /><br />
+
+  <input
+    type="password"
+    name="password"
+    [(ngModel)]="credentials.trainerPassword"
+  />
+  <br /><br />
+
+  <button (click)="login()">Login</button>
+</form>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HeroesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Colors">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ColorDescription" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Heroes">
+    <Key>
+      <PropertyRef Name="HeroID" />
+    </Key>
+    <Property Name="HeroID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TrainerID" Type="int" />
+    <Property Name="HeroFirstName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="HeroLastName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="HeroAbility" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="HeroStartTrainingDate" Type="date" Nullable="false" />
+    <Property Name="HeroSuitColorsID" Type="int" Nullable="false" />
+    <Property Name="HeroStartingPower" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="HeroCurrentPower" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Trainers">
+    <Key>
+      <PropertyRef Name="TrainerID" />
+    </Key>
+    <Property Name="TrainerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TrainerUsername" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="TrainerPassword" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Heroes_Colors">
+    <End Role="Colors" Type="Self.Colors" Multiplicity="1" />
+    <End Role="Heroes" Type="Self.Heroes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Heroes">
+        <PropertyRef Name="HeroSuitColorsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Heroes_Trainers">
+    <End Role="Trainers" Type="Self.Trainers" Multiplicity="0..1" />
+    <End Role="Heroes" Type="Self.Heroes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trainers">
+        <PropertyRef Name="TrainerID" />
+      </Principal>
+      <Dependent Role="Heroes">
+        <PropertyRef Name="TrainerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HeroesModelStoreContainer">
+    <EntitySet Name="Colors" EntityType="Self.Colors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Heroes" EntityType="Self.Heroes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trainers" EntityType="Self.Trainers" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Heroes_Colors" Association="Self.FK_Heroes_Colors">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="Heroes" EntitySet="Heroes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Heroes_Trainers" Association="Self.FK_Heroes_Trainers">
+      <End Role="Trainers" EntitySet="Trainers" />
+      <End Role="Heroes" EntitySet="Heroes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

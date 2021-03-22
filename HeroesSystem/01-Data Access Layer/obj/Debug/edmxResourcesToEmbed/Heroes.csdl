@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HeroesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="HeroesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Colors" EntityType="HeroesModel.Color" />
+    <EntitySet Name="Heroes" EntityType="HeroesModel.Hero" />
+    <EntitySet Name="sysdiagrams" EntityType="HeroesModel.sysdiagram" />
+    <EntitySet Name="Trainers" EntityType="HeroesModel.Trainer" />
+    <AssociationSet Name="FK_Heroes_Colors" Association="HeroesModel.FK_Heroes_Colors">
+      <End Role="Color" EntitySet="Colors" />
+      <End Role="Hero" EntitySet="Heroes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Heroes_Trainers" Association="HeroesModel.FK_Heroes_Trainers">
+      <End Role="Trainer" EntitySet="Trainers" />
+      <End Role="Hero" EntitySet="Heroes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ColorDescription" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Heroes" Relationship="HeroesModel.FK_Heroes_Colors" FromRole="Color" ToRole="Hero" />
+  </EntityType>
+  <EntityType Name="Hero">
+    <Key>
+      <PropertyRef Name="HeroID" />
+    </Key>
+    <Property Name="HeroID" Type="Guid" Nullable="false" />
+    <Property Name="TrainerID" Type="Int32" />
+    <Property Name="HeroFirstName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="HeroLastName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="HeroAbility" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HeroStartTrainingDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="HeroSuitColorsID" Type="Int32" Nullable="false" />
+    <Property Name="HeroStartingPower" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="HeroCurrentPower" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <NavigationProperty Name="Color" Relationship="HeroesModel.FK_Heroes_Colors" FromRole="Hero" ToRole="Color" />
+    <NavigationProperty Name="Trainer" Relationship="HeroesModel.FK_Heroes_Trainers" FromRole="Hero" ToRole="Trainer" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Trainer">
+    <Key>
+      <PropertyRef Name="TrainerID" />
+    </Key>
+    <Property Name="TrainerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TrainerUsername" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TrainerPassword" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Heroes" Relationship="HeroesModel.FK_Heroes_Trainers" FromRole="Trainer" ToRole="Hero" />
+  </EntityType>
+  <Association Name="FK_Heroes_Colors">
+    <End Type="HeroesModel.Color" Role="Color" Multiplicity="1" />
+    <End Type="HeroesModel.Hero" Role="Hero" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Hero">
+        <PropertyRef Name="HeroSuitColorsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Heroes_Trainers">
+    <End Type="HeroesModel.Trainer" Role="Trainer" Multiplicity="0..1" />
+    <End Type="HeroesModel.Hero" Role="Hero" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trainer">
+        <PropertyRef Name="TrainerID" />
+      </Principal>
+      <Dependent Role="Hero">
+        <PropertyRef Name="TrainerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

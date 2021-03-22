@@ -1,0 +1,82 @@
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\04-Web API.dll.config
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\04-Web API.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\04-Web API.pdb
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\csc.exe
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\csc.exe.config
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\csc.rsp
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\csi.exe
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\csi.exe.config
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\csi.rsp
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.AppContext.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Console.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.IO.Compression.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Net.Http.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.ValueTuple.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\vbc.exe
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\vbc.exe.config
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\vbc.rsp
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\VBCSCompiler.exe
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\01_Data_Access_Layer.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\02-Data Transfer Object.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\03-Business Logic Layer.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\EntityFramework.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\EntityFramework.SqlServer.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\Newtonsoft.Json.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\System.Net.Http.Formatting.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\System.Web.Http.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\System.Web.Http.WebHost.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\01_Data_Access_Layer.pdb
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\01_Data_Access_Layer.dll.config
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\02-Data Transfer Object.pdb
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\03-Business Logic Layer.pdb
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\03-Business Logic Layer.dll.config
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\EntityFramework.xml
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\EntityFramework.SqlServer.xml
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\Newtonsoft.Json.xml
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\System.Net.Http.Formatting.xml
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\System.Web.Http.xml
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\System.Web.Http.WebHost.xml
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\obj\Debug\04-Web API.csprojAssemblyReference.cache
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\obj\Debug\04-Web API.csproj.CoreCompileInputs.cache
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\obj\Debug\04-Web API.csproj.CopyComplete
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\obj\Debug\04-Web API.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\obj\Debug\04-Web API.pdb
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\System.Web.Cors.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\System.Web.Http.Cors.dll
+C:\Users\Rivka\Desktop\JB\Talent\HeroesSystem\04-Web API\bin\System.Web.Http.Cors.xml
